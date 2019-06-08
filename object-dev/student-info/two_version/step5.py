@@ -137,34 +137,38 @@ def delete_stu_info():
     if find_flag == 0:
         print('此学生不存在，请重新输入')
 
-#恢复以前数据到程序中
-load_stu_info()
+def main():
+    #恢复以前数据到程序中
+    load_stu_info()
 
-#打印功能提示菜单
-print_menu()
+    #打印功能提示菜单
+    print_menu()
 
-while True:
+    while True:
 
-    #2. 获取用户的输入
-    num = int(input('请输入操作序号：'))
+        #2. 获取用户的输入
+        num = int(input('请输入操作序号：'))
 
-    #3. 根据用户的数据执行相应的功能
-    if num==1:
-        find_stu_info() 
-    elif num==2:
-        add_stu_info()
-    elif num==3:
-        modify_stu_info()
-    elif num==4:
-        delete_stu_info()
-    elif num==5:
-        show_stu_info()
-    elif num==6:
-        save_stu_info()
-    elif num==7:
-        break
-    else:
-        print('输入有误，请重新输入')
+        #3. 根据用户的数据执行相应的功能
+        if num==1:
+            find_stu_info() 
+        elif num==2:
+            add_stu_info()
+        elif num==3:
+            modify_stu_info()
+        elif num==4:
+            delete_stu_info()
+        elif num==5:
+            show_stu_info()
+        elif num==6:
+            save_stu_info()
+        elif num==7:
+            break
+        else:
+            print('输入有误，请重新输入')
     
-    print('-'*50)
-    print('')
+        print('-'*50)
+        print('')
+
+if __name__ == '__main__':
+    main()
